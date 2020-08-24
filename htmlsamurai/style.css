@@ -152,10 +152,6 @@ ul.menu li a{
 }
 
 /* Propaganda 2 */
-.propaganda-dois{
-
-}
-
 .btn-saiba-mais3{
     border: 2px solid #fff;
     padding: 15px 28px;
@@ -169,4 +165,15 @@ ul.menu li a{
     color: #000000;
     background: #fff;
     text-decoration: none;
+}
+
+/* Mais Detalhes */
+.img-design-responsivo{
+    max-width: 200px;
+}
+.mais-detalhes{
+    padding-top: 80px;
+}
+.texto-detalhes-width{
+    max-width: 270px;
 }
