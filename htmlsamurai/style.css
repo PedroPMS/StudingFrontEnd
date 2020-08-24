@@ -1,0 +1,172 @@
+/* Utilidade */
+.oculto{
+    font-size: 0px;
+    margin: 0px;
+    padding: 0px;
+}
+.logo{
+    max-width: 200px;
+    float: left;
+    margin-top: 6px;
+}
+.clear{
+    clear: both;
+}
+
+/* Cores */
+.color-white{
+    color: #fff;
+}
+
+
+/* Backgrounds */
+.bg-black{
+    background: #000;
+}
+.bg-blue-one{
+    background: #33b5e5;
+}
+
+/* Backgrounds Parallax */
+.background-fixed-1{
+    background-image: url("imgs/background-parallax-home.png");
+    background-attachment: fixed;
+}
+.background-fixed-2{
+    background-image: url("imgs/background-parallax.jpg");
+    background-attachment: fixed;
+}
+
+/* Tamanhos de Fontes */
+
+/* Botões */
+.btn-saiba-mais{
+    background-color: #337ab7;
+    color: #fff;
+    padding: 16px 35px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 3px;
+    float: right;
+}
+
+/* Padding */
+.padding-10{padding: 10px 0px;}
+.padding-20{padding: 20px 0px;}
+.padding-30{padding: 30px 0px;}
+.padding-40{padding: 40px 0px;}
+.padding-50{padding: 50px 0px;}
+.padding-60{padding: 60px 0px;}
+.padding-70{padding: 70px 0px;}
+.padding-80{padding: 80px 0px;}
+
+/* Header */
+.header{
+    width: 100%;
+    min-height: 65px;
+    padding: 13px;
+    float: left;
+    margin: 0px;
+}
+
+ul.menu{
+    list-style: none;
+    float: left;
+    margin-top: 15px;
+}
+
+ul.menu li{
+    display: inline-block;
+}
+
+ul.menu li a{
+    color: #fff;
+    margin-left: 14px;
+    font-size: 17px;
+}
+
+/* Slide */
+.slide{
+    padding: 110px;
+}
+
+.titulo-slide{
+    font-size: 50px;
+    font-weight: bold;
+}
+
+/* Detalhes do Curso */
+.detalhes{
+    padding: 20px;
+}
+
+.detalhes:hover{
+    cursor: pointer;
+    background-color: #33b5e5;
+    border-radius: 20px;
+    color: #fff;
+}
+
+.titulo{
+    font-size: 26px;
+}
+
+.titulo-detalhe{
+    font-size: 16px;
+}
+
+/* Propaganda */
+.titulo-propaganda{
+    font-size: 22px;
+    max-width: 60%;
+    margin: 0px auto;
+}
+
+.btn-saiba-mais2{
+    border: 2px solid #fff;
+    padding: 15px 28px;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 5px; 
+    display: inline-flex;
+}
+
+.btn-saiba-mais2:hover{
+    color: #33b5e5;
+    background: #fff;
+    text-decoration: none;
+}
+
+/* Cursos */
+.img-curso{
+    max-width: 200px;
+}
+
+.descricao{
+    font-size: 12px;
+}
+
+.titulo-curso{
+    font-weight: bold;
+    font-size: 20px;
+}
+
+/* Propaganda 2 */
+.propaganda-dois{
+
+}
+
+.btn-saiba-mais3{
+    border: 2px solid #fff;
+    padding: 15px 28px;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 5px; 
+    display: inline-flex;
+}
+
+.btn-saiba-mais3:hover{
+    color: #000000;
+    background: #fff;
+    text-decoration: none;
+}
