@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <div class="container" align="center">
+
+        <div class="display-result">
+            <form name="calc" class="from-resultado">
+            <input class="value" type="text" name="txt" readonly="" value="0">
+            </form>
+        </div> 
+
+        <div class="teclas text-center">
+
+            <div class="oper-igual">
+
+                <div class="oper">
+                    <button class="operador-igual text-center" onclick="document.calc.txt.value += '/'">/</button>
+                </div>
+    
+                <div class="igual">
+                    <button class="botao-igual text-center" onclick="document.calc.txt.value = eval(calc.txt.value)">=</button>
+                </div>
+            </div>
+
+            <div class="oper-numeros">
+                <button class="botao-operador text-center" onclick="insertData('+')">+</button>
+                <button class="botao-operador text-center" onclick="insertData('-')">-</button>
+                <button class="botao-operador text-center" onclick="insertData('*')">x</button>
+
+                <button class="botao-corpo text-center" onclick="insertData('7')">7</button>
+                <button class="botao-corpo text-center" onclick="insertData('8')">8</button>
+                <button class="botao-corpo text-center" onclick="insertData('9')">9</button>
+
+                <button class="botao-corpo text-center" onclick="insertData('4')">4</button>
+                <button class="botao-corpo text-center" onclick="insertData('5')">5</button>
+                <button class="botao-corpo text-center" onclick="insertData('6')">6</button>
+
+                <button class="botao-corpo text-center" onclick="insertData('1')">1</button>
+                <button class="botao-corpo text-center" onclick="insertData('2')">2</button>
+                <button class="botao-corpo text-center" onclick="insertData('3')">3</button>
+
+                <button class="botao-corpo text-center" onclick="insertData('0')">0</button>
+                <button class="botao-corpo text-center" onclick="insertData('.')">.</button>
+                <button class="botao-corpo text-center" onclick="document.calc.txt.value = '0'">AC</button>
+            </div>
+        </div>       
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="script.js"></script>
+</body>
+</html>
