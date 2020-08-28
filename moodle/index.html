@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>Moodle</title>
+  </head>
+  <body>
+    <h1 onload="ler()">Hey</h1>
+    <p>This is a shit</p>
+    <div class="body-video">
+      <div class="video">
+        <button class="cancel">×</button>
+        <iframe
+          class="video-player"
+          width="640"
+          height="480"
+          src="https://player.vimeo.com/video/76979871?embedparameter=value"
+        ></iframe>
+      </div>
+    </div>
+
+    <script>
+      const videoBody = document.querySelector(".body-video");
+      const closeVideo = document.querySelector(".cancel");
+
+      var obj = localStorage.getItem("jaLogou");
+      if (obj != null) {
+        videoBody.style.display = "none";
+      } else {
+        videoBody.style.animationName = "fadeInDown";
+        videoBody.style.animationDuration = "2s";
+        videoBody.style.display = "";
+        localStorage.setItem("jaLogou", "1");
+      }
+
+      closeVideo.addEventListener("click", () => {
+        // YouTUBE
+        $(".video-player")[0].contentWindow.postMessage(
+          '{"event":"command","func":"' + "stopVideo" + '","args":""}',
+          "*"
+        );
+
+        // VIMEO
+        $(".video-player")[0].contentWindow.postMessage(
+          '{"method":"pause"}', '*'
+        );
+
+        videoBody.style.display = "none";
+      });
+    </script>
+  </body>
+</html>
