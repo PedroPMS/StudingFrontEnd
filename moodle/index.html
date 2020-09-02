@@ -4,52 +4,59 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <title>Moodle</title>
   </head>
   <body>
-    <h1 onload="ler()">Hey</h1>
-    <p>This is a shit</p>
-    <div class="body-video">
+    <h1>Hey</h1>
+    <p>This is a content</p>
+    <div class="background">
+      <button class="cancel">×</button>
       <div class="video">
-        <button class="cancel">×</button>
         <iframe
           class="video-player"
-          width="640"
-          height="480"
+          allowfullscreen="allowfullscreen"
+          mozallowfullscreen="mozallowfullscreen"
+          msallowfullscreen="msallowfullscreen"
+          oallowfullscreen="oallowfullscreen"
+          webkitallowfullscreen="webkitallowfullscreen"
           src="https://player.vimeo.com/video/76979871?embedparameter=value"
         ></iframe>
       </div>
     </div>
 
     <script>
-      const videoBody = document.querySelector(".body-video");
+      // Capturando os elementos do HTML
+      const videoBody = document.querySelector(".background");
       const closeVideo = document.querySelector(".cancel");
+      const video = document.querySelector(".video-player");
+      // Fim da captura
 
-      var obj = localStorage.getItem("jaLogou");
+      // Verificando se o usuário já viu o vídeo
+      var obj = localStorage.getItem("ja_logou");
       if (obj != null) {
         videoBody.style.display = "none";
       } else {
         videoBody.style.animationName = "fadeInDown";
         videoBody.style.animationDuration = "2s";
         videoBody.style.display = "";
-        localStorage.setItem("jaLogou", "1");
+        //localStorage.setItem("ja_logou", "1");
       }
+      // Fim da verificação
 
+      // Fechar o vídeo e parar a reprodução
       closeVideo.addEventListener("click", () => {
         // YouTUBE
-        $(".video-player")[0].contentWindow.postMessage(
+        video.contentWindow.postMessage(
           '{"event":"command","func":"' + "stopVideo" + '","args":""}',
           "*"
         );
 
         // VIMEO
-        $(".video-player")[0].contentWindow.postMessage(
-          '{"method":"pause"}', '*'
-        );
+        video.contentWindow.postMessage('{"method":"pause"}', "*");
 
         videoBody.style.display = "none";
       });
+      // Fim
     </script>
   </body>
 </html>
